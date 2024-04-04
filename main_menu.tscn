@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://xjb6kybo8bdk"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_rsbuk"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rsbuk")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 206.0
+offset_right = 567.0
+offset_bottom = 237.0
+text = "Play
+"
+
+[node name="HostButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 245.0
+offset_right = 538.0
+offset_bottom = 276.0
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 244.0
+offset_right = 590.0
+offset_bottom = 275.0
+text = "Join"
+
+[connection signal="button_down" from="PlayButton" to="." method="play"]
+[connection signal="button_down" from="HostButton" to="." method="host"]
+[connection signal="button_down" from="JoinButton" to="." method="join"]

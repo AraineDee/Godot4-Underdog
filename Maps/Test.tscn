@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ry4nexa6m6jh"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_7iaco"]
+[ext_resource type="Script" path="res://Maps/Map.gd" id="1_dfdqi"]
+[ext_resource type="PackedScene" uid="uid://camvcri7e11vi" path="res://addons/devblocks/blocks/colored_block.tscn" id="2_kyek3"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_dfdqi")
+
+[node name="BasicBlock" parent="." instance=ExtResource("1_7iaco")]
+transform = Transform3D(22.9129, 0, 0, 0, 0.170268, 0, 0, 0, 21.9501, 0, 0, 0)
+collision_mask = 2
+
+[node name="ColoredBlock" parent="." instance=ExtResource("2_kyek3")]
+transform = Transform3D(0.560846, 0, 0, 0, 1.88209, 0, 0, 0, 8.27024, -3.26582, 0.972927, 0)
+collision_mask = 2
+block_color_group = 3
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.445276, 0.895393, 0, -0.895393, -0.445276, 0, 7.81088, -3.82536)
+
+[node name="Spawnpoint" type="Node3D" parent="." groups=["Spawns"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.260259, 2.57422)
